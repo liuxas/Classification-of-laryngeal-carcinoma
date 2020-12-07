@@ -4,3 +4,5 @@
 
 执行show.py，pre_processing.py,train.py开始训练
 执行predict.py开始预测
+
+训练准确率99% 预测91%
