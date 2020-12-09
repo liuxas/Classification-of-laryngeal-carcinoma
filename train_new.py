@@ -38,22 +38,7 @@ def generate_arrays_from_file(img_paths_ll):
             img = cv2.imread(img_path)
             img = img.astype("float32")
             # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            img = img[np.newaxis,:,:,np.newaxis]
-            img = img/255
-            if "non" in img_path:
-                label= np.array([[1,0]]).astype("int8")
-            else:
-                label= np.array([[0,1]]).astype("int8")  
-            yield (img,label)
-
-def generate_arrays_from_file_val(img_paths_ll):
-    while True:
-        for img_path in img_paths_ll:
-            img = cv2.imread(img_path)
-            img = img.astype("float32")
-            # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            # img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             img = img[np.newaxis,:,:,np.newaxis]
             img = img/255
             if "non" in img_path:

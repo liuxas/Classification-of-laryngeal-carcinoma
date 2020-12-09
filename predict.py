@@ -2,7 +2,7 @@ import cv2
 import keras
 import numpy as np
 import tensorflow as tf
-# from ipdb import set_trace
+from ipdb import set_trace
 
 gpus = tf.config.experimental.list_physical_devices(device_type='GPU')
 tf.config.experimental.set_virtual_device_configuration(gpus[0],[tf.config.experimental.VirtualDeviceConfiguration(memory_limit=2040)])
@@ -18,4 +18,4 @@ img = img/255
 model = keras.models.load_model(model_path)
 pred = model.predict(img)
 pred_label = np.argmax(pred) #label为1，则为患有癌症
-# set_trace()
+set_trace()

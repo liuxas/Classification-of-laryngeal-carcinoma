@@ -5,4 +5,5 @@
 执行show.py，pre_processing.py,train.py开始训练
 执行predict.py开始预测
 
-训练准确率99% 预测91%
+自定义网络：训练准确率99% 预测91%
+vgg16预训练权重：训练准确率99% 预测准确率99%
